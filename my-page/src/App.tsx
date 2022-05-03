@@ -1,25 +1,20 @@
-import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import customData from "./data.json";
 
-const myInfo = {
-  firstName: 'Andrei',
-  biography: 'I am 27 years old and working as a barman',
-  phone: '+380930006658',
-  email: 'some.andy@gmail.com',
-}
 const Bio = () => (
   <div className="App">
     <h1>Welcome to the My World!</h1>
-    <h2>Hello! My name is {myInfo.firstName}. <br></br>
-      {myInfo.biography}.</h2>
-    <p className='textAlighn'>
+    <h2>
+      Hello! My name is {customData.firstName}.<br></br>
+      {customData.biography}
+    </h2>
+    <p className="textAlighn">
       My contacts: <br></br>
-      Phone: {myInfo.phone} <br></br>
-      Email: {myInfo.email}
+      Phone: {customData.contacts.phone} <br></br>
+      Email: {customData.contacts.email}
     </p>
   </div>
-)
-
+);
 
 export default Bio;
